@@ -1,4 +1,5 @@
 import React from 'react'
+import { FaStar } from "react-icons/fa";
 
 const Reviews = () => {
   const reviewData = [
@@ -18,7 +19,7 @@ const Reviews = () => {
       </div>
 
       <div id="rating" className="my-6">
-        <p className='text-sm text-black font-semibold'><span className="text-3xl font-bold text-black pr-2">5.0</span> overall rating</p>
+        <p className='text-sm text-black font-semibold flex items-center'><span className="text-3xl font-bold text-black pr-2">5.0</span> <FaStar className='text-orange-400 mx-1' /> overall rating</p>
         <div className='flex flex-col '>
           <div className="flex flex-row container my-4 space-x-2 justify-between">
             <p className="w-1/4 font-semibold text-gray-400">5 stars</p>
@@ -59,16 +60,22 @@ const Reviews = () => {
           <h2 className='font-bold container text-2xl my-4'>
             Reviews (2)
           </h2>
-
           <div id="reviews" className="flex flex-col container mx-auto space-y-6">
             {reviewData.map((review, index) => (
               <div className='border-b-2' key={index}>
+                <div className="flex flex-row container space-x-1">
+                  <FaStar className='text-orange-400' />
+                  <FaStar className='text-orange-400' />
+                  <FaStar className='text-orange-400' />
+                  <FaStar className='text-orange-400' />
+                  <FaStar className='text-orange-400' />
+                </div>
                 <div className="flex flex-row py-4 space-x-2">
                   <p className="font-semibold">{review.name}</p>
                   <p className="font-semibold text-gray-400">{review.date}</p>
                 </div>
                 <div className="container mx-auto text-start pb-6 font-semibold">
-                 {review.details}
+                  {review.details}
                 </div>
               </div>
             ))}
