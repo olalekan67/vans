@@ -51,7 +51,7 @@ const Signup = () => {
     //   return
     // }
 
-    location.assign('/host')
+    location.assign('/')
 
     errorP.classList.toggle('hidden')
     setEmail('')
