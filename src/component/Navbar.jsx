@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import logo from '../assets/logog.png'
-import signIn from '../assets/icon.png'
+import signIn from '../assets/Icon.png'
 
 
 const Navbar = () => {
